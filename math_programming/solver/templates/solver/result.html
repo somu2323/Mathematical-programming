@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Result</h1>
+        <p><strong>Objective:</strong> {{ objective|title }}</p>
+        <p><strong>Status:</strong> {{ result.status }}</p>
+
+        {% if result.status == "Optimal" %}
+            <p><strong>x1:</strong> {{ result.x }}</p>
+            <p><strong>x2:</strong> {{ result.y }}</p>
+            <p><strong>Optimal Value:</strong> {{ result.objective_value }}</p>
+        {% endif %}
+
+        <a href="{% url 'simplex_method' %}">Try Again</a>
+    </div>
+</body>
+</html>

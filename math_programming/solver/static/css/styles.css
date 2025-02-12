@@ -1,0 +1,25 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 600px;
+}
+
+h1 {
+    color: #007BFF;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.btn {
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}

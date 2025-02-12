@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Linear Programming Solver</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Linear Programming Solver</h1>
+
+        <div class="card shadow p-4">
+            <form method="post">
+                {% csrf_token %}
+                <!-- Method Selection -->
+                <div class="mb-3">
+                    <label class="form-label"><strong>Select Method:</strong></label>
+                    {{ form.method }}
+                </div>
+
+                <!-- Objective Function Selection -->
+                <div class="mb-3">
+                    <label class="form-label"><strong>Objective Function:</strong></label>
+                    {{ form.objective }}
+                </div>
+
+                <!-- Objective Function Coefficients -->
+                <h4>Enter Objective Function</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Coefficient of x₁</label>
+                        {{ form.obj_x1 }}
+                    </div>
+                    <div class="col-md-6">
+                        <label>Coefficient of x₂</label>
+                        {{ form.obj_x2 }}
+                    </div>
+                </div>
+
+                <!-- Solve Button -->
+                <button type="submit" class="btn btn-success btn-lg mt-4 w-100">Solve</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
