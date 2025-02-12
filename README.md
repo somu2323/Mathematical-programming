@@ -7,4 +7,3 @@ Libraries commonly used in this project
   pip install matplotlib
 4.SciPy - Used for Simplex method calculations (if applicable).
   pip install scipy
-here i am klearfbdsibiauw
